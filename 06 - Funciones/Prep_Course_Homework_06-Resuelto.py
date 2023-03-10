@@ -203,7 +203,7 @@ def factorial(numero):
     if (numero > 1):
         numero = numero * factorial(numero - 1)
     return numero
-print(factorial(3))
+print(factorial(0))
 print(factorial(-2))
 print(factorial(1.23))
 print(factorial('6'))

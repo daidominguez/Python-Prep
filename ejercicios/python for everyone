@@ -1,0 +1,67 @@
+#encuentra el numero mas chico de una lista
+smallest = None
+print("Before:", smallest)
+for itervar in [33, 41, 12, 9, 74, 15]:
+    if smallest is None or itervar < smallest:
+        smallest = itervar
+    print("Loop:", itervar, smallest)
+print("Smallest:", smallest)
+
+#strings
+for n in "banana":
+    print(n)
+word='  hola  '
+word.lstrip()
+word.rstrip()
+word.strip()
+word.find('an')
+word.replace('a','X')
+word.startswith('5')
+data='Hola mi nombre es d@edu.com 2555'
+ind=data.find('@')
+poss=data.find(' ',ind)
+print(data[ind+1:poss]) #edu.com
+
+#reading files
+#open('nombrearchivo.ext', r/w/nothing) para abrir un archivo
+
+#lists
+#a list is a kind of collections 
+lista=[8,2,3,4,5,6]
+len(lista)
+print(max(lista))
+print(min(lista))
+print(sum(lista))
+
+words = 'His e-mail is q-lar@freecodecamp.org'
+pieces = words.split()
+parts = pieces[3].split('-')
+n = parts[1]
+
+#dictionaries
+purse=dict() #definir diccionario vacio
+purse={} #otra forma
+counts = { 'quincy' : 1 , 'mrugesh' : 42, 'beau': 100, '0': 10}
+print(counts.get('kris', 0)) #asigna valor 0 si la clave no esta en el diccionario 
+lista=list(counts.keys())
+lista.sort()
+print(lista)
+print(len(counts.keys()))
+print(counts.values())
+print(counts.items())
+
+#tuples
+#a diferencia de las listas, son inmutables como las cadenas
+lista=counts.items()
+sorted(lista)
+sorted(lista, reverse=True)
+
+lst = []
+for key, val in counts.items():
+    newtup = (val, key)
+    lst.append(newtup)
+lst = sorted(lst, reverse=True)
+print(lst)
+
+print( sorted( [ (v,k) for k,v in counts.items() ], reverse=True ) )
+
